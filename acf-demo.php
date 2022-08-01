@@ -13,6 +13,8 @@
  * Domain Path:       /languages
  */
 require_once ( plugin_dir_path( __FILE__ )."/libs/class-tgm-plugin-activation.php" );
+require_once ( plugin_dir_path( __FILE__ )."/inc/metabox.php" );
+
 function acfd_boostrap(){
     load_plugin_textdomain( 'acf-demo', false, dirname(__FILE__) . "/languages" );
 }
@@ -47,4 +49,4 @@ function acfd_tgm_register_required_plugins() {
 	tgmpa( $plugins, $config );
 }
 
-// changed from picci...
+add_filter('acf/settings/show_admin', '__return_false');
