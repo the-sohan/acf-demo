@@ -46,3 +46,5 @@ function acfd_tgm_register_required_plugins() {
 
 	tgmpa( $plugins, $config );
 }
+
+// changed from picci...
