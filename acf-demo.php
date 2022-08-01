@@ -16,7 +16,7 @@ require_once ( plugin_dir_path( __FILE__ )."/libs/class-tgm-plugin-activation.ph
 function acfd_boostrap(){
     load_plugin_textdomain( 'acf-demo', false, dirname(__FILE__) . "/languages" );
 }
-add_action( 'plugins_loaded', 'acfc_bootstrap' );
+add_action( 'plugins_loaded', 'acfd_boostrap' );
 
 add_action( 'tgmpa_register', 'acfd_tgm_register_required_plugins' );
 
