@@ -1,6 +1,6 @@
 <?php
 /**
- * Plugin Name:       ACF Demo
+ * Plugin Name:       ACF Demo test
  * Plugin URI:        https://example.com/plugins/
  * Description:       This is practise plugin.
  * Version:           1.0
