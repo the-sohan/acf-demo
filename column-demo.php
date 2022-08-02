@@ -30,3 +30,15 @@ function coldemo_post_columns( $columns ) {
 	return $columns;
 }
 add_filter('manage_posts_columns', 'coldemo_post_columns');
+add_filter('manage_pages_columns', 'coldemo_post_columns');
+
+function coldemo_post_column_data( $column, $post_id ) {
+	if ( 'id' == $column ) {
+		echo $post_id;
+	} elseif ( 'thumbnail' == $column ) {
+		$thumbnail = get_the_post_thumbnail( $post_id, array(100, 100) );
+		echo $thumbnail;
+	}
+}
+
+add_action( 'manage_posts_custom_column', 'coldemo_post_column_data' );
